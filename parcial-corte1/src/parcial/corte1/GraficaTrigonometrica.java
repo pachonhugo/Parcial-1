@@ -14,6 +14,7 @@ public class GraficaTrigonometrica extends javax.swing.JFrame {
     /**
      * Creates new form GraficaTrigonometrica
      */
+    Calculadora micalculadora=new Calculadora();
     public GraficaTrigonometrica() {
         initComponents();
     }
@@ -27,21 +28,276 @@ public class GraficaTrigonometrica extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        botonMultiplicar = new javax.swing.JButton();
+        botonDividir = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        textoResultado = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        textoNumero1 = new javax.swing.JTextField();
+        textoNumero2 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        botonSumar = new javax.swing.JButton();
+        botonRestar = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        textoAngulo = new javax.swing.JTextField();
+        botonSeno = new javax.swing.JButton();
+        botonCoseno = new javax.swing.JButton();
+        botonTangete = new javax.swing.JButton();
+        botonCotangente = new javax.swing.JButton();
+        botonSecante = new javax.swing.JButton();
+        botonCosecante = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        botonMultiplicar.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        botonMultiplicar.setText("*");
+        botonMultiplicar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonMultiplicarMouseClicked(evt);
+            }
+        });
+
+        botonDividir.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        botonDividir.setText("/");
+        botonDividir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonDividirMouseClicked(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jLabel1.setText("Numero 2");
+
+        textoResultado.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        textoResultado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jLabel2.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jLabel2.setText("Resultado");
+
+        textoNumero1.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        textoNumero1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        textoNumero2.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        textoNumero2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jLabel3.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jLabel3.setText("Numero 1");
+
+        botonSumar.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        botonSumar.setText("+");
+        botonSumar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonSumarMouseClicked(evt);
+            }
+        });
+
+        botonRestar.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        botonRestar.setText("-");
+        botonRestar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonRestarMouseClicked(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        jLabel4.setText("Angulo (en sistema sexagesimal)");
+
+        textoAngulo.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        textoAngulo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        botonSeno.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        botonSeno.setText("Sin");
+        botonSeno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonSenoMouseClicked(evt);
+            }
+        });
+
+        botonCoseno.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        botonCoseno.setText("Cos");
+        botonCoseno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonCosenoMouseClicked(evt);
+            }
+        });
+
+        botonTangete.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        botonTangete.setText("Tan");
+        botonTangete.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonTangeteMouseClicked(evt);
+            }
+        });
+
+        botonCotangente.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        botonCotangente.setText("Cot");
+        botonCotangente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonCotangenteMouseClicked(evt);
+            }
+        });
+
+        botonSecante.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        botonSecante.setText("Sec");
+        botonSecante.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonSecanteMouseClicked(evt);
+            }
+        });
+
+        botonCosecante.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
+        botonCosecante.setText("Csc");
+        botonCosecante.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonCosecanteMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(textoResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(204, 204, 204))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(textoNumero1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(166, 166, 166)
+                                .addComponent(botonSumar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(botonRestar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(botonMultiplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(botonDividir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(textoNumero2, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
+                        .addComponent(textoAngulo, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(267, 267, 267)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(botonSeno, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(botonCoseno, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(botonTangete, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(botonCotangente, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(botonSecante, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(botonCosecante, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textoNumero1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(botonSumar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonRestar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonMultiplicar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonDividir, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textoNumero2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textoAngulo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(botonSeno, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonCotangente, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonSecante, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonCosecante, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonTangete, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonCoseno, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(textoResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonMultiplicarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonMultiplicarMouseClicked
+        micalculadora.numero1=Float.valueOf(textoNumero1.getText());
+        micalculadora.numero2=Float.valueOf(textoNumero2.getText());
+        textoResultado.setText(String.valueOf(micalculadora.multiplicar()));
+    }//GEN-LAST:event_botonMultiplicarMouseClicked
+
+    private void botonDividirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonDividirMouseClicked
+        micalculadora.numero1=Float.valueOf(textoNumero1.getText());
+        micalculadora.numero2=Float.valueOf(textoNumero2.getText());
+        textoResultado.setText(String.valueOf(micalculadora.dividir()));
+    }//GEN-LAST:event_botonDividirMouseClicked
+
+    private void botonSumarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSumarMouseClicked
+
+        micalculadora.numero1=Float.valueOf(textoNumero1.getText());
+        micalculadora.numero2=Float.valueOf(textoNumero2.getText());
+        textoResultado.setText(String.valueOf(micalculadora.sumar()));
+    }//GEN-LAST:event_botonSumarMouseClicked
+
+    private void botonRestarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonRestarMouseClicked
+        micalculadora.numero1=Float.valueOf(textoNumero1.getText());
+        micalculadora.numero2=Float.valueOf(textoNumero2.getText());
+        textoResultado.setText(String.valueOf(micalculadora.restar()));
+    }//GEN-LAST:event_botonRestarMouseClicked
+
+    private void botonSenoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSenoMouseClicked
+       micalculadora.angulo=Float.valueOf(textoAngulo.getText());
+       textoResultado.setText(String.valueOf(micalculadora.Seno()));
+    }//GEN-LAST:event_botonSenoMouseClicked
+
+    private void botonCosenoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCosenoMouseClicked
+       micalculadora.angulo=Float.valueOf(textoAngulo.getText());
+       textoResultado.setText(String.valueOf(micalculadora.Coseno()));
+    }//GEN-LAST:event_botonCosenoMouseClicked
+
+    private void botonTangeteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonTangeteMouseClicked
+       micalculadora.angulo=Float.valueOf(textoAngulo.getText());
+       textoResultado.setText(String.valueOf(micalculadora.Tangente()));
+    }//GEN-LAST:event_botonTangeteMouseClicked
+
+    private void botonCotangenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCotangenteMouseClicked
+       micalculadora.angulo=Float.valueOf(textoAngulo.getText());
+       textoResultado.setText(String.valueOf(micalculadora.Cotangente()));
+    }//GEN-LAST:event_botonCotangenteMouseClicked
+
+    private void botonSecanteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSecanteMouseClicked
+       micalculadora.angulo=Float.valueOf(textoAngulo.getText());
+       textoResultado.setText(String.valueOf(micalculadora.Secante()));
+    }//GEN-LAST:event_botonSecanteMouseClicked
+
+    private void botonCosecanteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCosecanteMouseClicked
+       micalculadora.angulo=Float.valueOf(textoAngulo.getText());
+       textoResultado.setText(String.valueOf(micalculadora.Cosecante()));
+    }//GEN-LAST:event_botonCosecanteMouseClicked
 
     /**
      * @param args the command line arguments
@@ -79,5 +335,23 @@ public class GraficaTrigonometrica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonCosecante;
+    private javax.swing.JButton botonCoseno;
+    private javax.swing.JButton botonCotangente;
+    private javax.swing.JButton botonDividir;
+    private javax.swing.JButton botonMultiplicar;
+    private javax.swing.JButton botonRestar;
+    private javax.swing.JButton botonSecante;
+    private javax.swing.JButton botonSeno;
+    private javax.swing.JButton botonSumar;
+    private javax.swing.JButton botonTangete;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField textoAngulo;
+    private javax.swing.JTextField textoNumero1;
+    private javax.swing.JTextField textoNumero2;
+    private javax.swing.JTextField textoResultado;
     // End of variables declaration//GEN-END:variables
 }

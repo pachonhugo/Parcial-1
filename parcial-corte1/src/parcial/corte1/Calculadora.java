@@ -13,6 +13,7 @@ public class Calculadora {
     
     float numero1;
     float numero2;
+    double angulo;
     
     float sumar(){
         return(numero1+numero2);
@@ -35,6 +36,52 @@ public class Calculadora {
         }        
         return(division);
     }    
+    
+    double Seno(){
+        double angulo = 45.0 * Math.PI/180.0;
+        return(Math.sin(angulo));
+    }  
+    
+    double Coseno(){
+        double angulo = 45.0 * Math.PI/180.0;
+        return(Math.cos(angulo));
+    }    
+    
+    double Tangente(){
+        double angulo = 45.0 * Math.PI/180.0;
+        if(angulo==Math.PI/2||angulo==Math.PI*3/2){
+            return(0);
+        }else{
+        return(Math.tan(angulo));
+        }
+    }    
+    
+    double Cotangente(){
+        double angulo = 45.0 * Math.PI/180.0;
+        if(angulo==0||angulo==Math.PI||angulo==Math.PI*2){
+            return(0);
+        }else{
+        return(1/Math.tan(angulo));
+        }
+    }    
+    
+    double Secante(){
+        double angulo = 45.0 * Math.PI/180.0;
+        if(angulo==Math.PI/2||angulo==Math.PI*3/2){
+            return(0);
+        }else{
+        return(1/Math.cos(angulo));
+        }
+    } 
+    
+    double Cosecante(){
+        double angulo = 45.0 * Math.PI/180.0;
+        if(angulo==0||angulo==Math.PI||angulo==Math.PI*2){
+            return(0);
+        }else{
+        return(1/Math.sin(angulo));
+        }
+    }      
     
     
 }
