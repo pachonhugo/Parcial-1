@@ -39,17 +39,17 @@ public class Calculadora {
     }    
     
     double Seno(){
-        double angulo = anguloingresado * Math.PI/180.0;
+        double angulo = Math.toRadians(anguloingresado);
         return(Math.sin(angulo));
     }  
     
     double Coseno(){
-        double angulo = anguloingresado * Math.PI/180.0;
+        double angulo = Math.toRadians(anguloingresado);
         return(Math.cos(angulo));
     }    
     
     double Tangente(){
-        double angulo = anguloingresado * Math.PI/180.0;
+        double angulo = Math.toRadians(anguloingresado);
         if(angulo==Math.PI/2||angulo==Math.PI*3/2){
             return(0);
         }else{
@@ -58,7 +58,7 @@ public class Calculadora {
     }    
     
     double Cotangente(){
-        double angulo = anguloingresado * Math.PI/180.0;
+        double angulo = Math.toRadians(anguloingresado);
         if(angulo==0||angulo==Math.PI||angulo==Math.PI*2){
             return(0);
         }else{
@@ -67,7 +67,7 @@ public class Calculadora {
     }    
     
     double Secante(){
-        double angulo = anguloingresado * Math.PI/180.0;
+        double angulo = Math.toRadians(anguloingresado);
         if(angulo==Math.PI/2||angulo==Math.PI*3/2){
             return(0);
         }else{
@@ -76,7 +76,7 @@ public class Calculadora {
     } 
     
     double Cosecante(){
-        double angulo = anguloingresado * Math.PI/180.0;
+        double angulo = Math.toRadians(anguloingresado);
         if(angulo==0||angulo==Math.PI||angulo==Math.PI*2){
             return(0);
         }else{
