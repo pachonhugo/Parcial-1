@@ -5,6 +5,8 @@
  */
 package parcial.corte1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author estudiantes
@@ -270,33 +272,53 @@ public class GraficaTrigonometrica extends javax.swing.JFrame {
     }//GEN-LAST:event_botonRestarMouseClicked
 
     private void botonSenoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSenoMouseClicked
-       micalculadora.angulo=Float.valueOf(textoAngulo.getText());
+       micalculadora.anguloingresado=Float.valueOf(textoAngulo.getText());
        textoResultado.setText(String.valueOf(micalculadora.Seno()));
     }//GEN-LAST:event_botonSenoMouseClicked
 
     private void botonCosenoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCosenoMouseClicked
-       micalculadora.angulo=Float.valueOf(textoAngulo.getText());
+       micalculadora.anguloingresado=Float.valueOf(textoAngulo.getText());
        textoResultado.setText(String.valueOf(micalculadora.Coseno()));
     }//GEN-LAST:event_botonCosenoMouseClicked
 
     private void botonTangeteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonTangeteMouseClicked
-       micalculadora.angulo=Float.valueOf(textoAngulo.getText());
+       micalculadora.anguloingresado=Float.valueOf(textoAngulo.getText());
+       if(micalculadora.angulo==Math.PI/2||micalculadora.angulo==Math.PI*3/2){
+           textoResultado.setText("");
+           JOptionPane.showMessageDialog(null, "No definido!!!");
+       }else{
        textoResultado.setText(String.valueOf(micalculadora.Tangente()));
+       }
     }//GEN-LAST:event_botonTangeteMouseClicked
 
     private void botonCotangenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCotangenteMouseClicked
-       micalculadora.angulo=Float.valueOf(textoAngulo.getText());
+       micalculadora.anguloingresado=Float.valueOf(textoAngulo.getText());
+       if(micalculadora.angulo==0||micalculadora.angulo==Math.PI||micalculadora.angulo==Math.PI*2){
+           textoResultado.setText("");
+           JOptionPane.showMessageDialog(null, "No definido!!!");
+       }else{
        textoResultado.setText(String.valueOf(micalculadora.Cotangente()));
+       }
     }//GEN-LAST:event_botonCotangenteMouseClicked
 
     private void botonSecanteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSecanteMouseClicked
-       micalculadora.angulo=Float.valueOf(textoAngulo.getText());
+       micalculadora.anguloingresado=Float.valueOf(textoAngulo.getText());
+       if(micalculadora.angulo==Math.PI/2||micalculadora.angulo==Math.PI*3/2){
+           textoResultado.setText("");
+           JOptionPane.showMessageDialog(null, "No definido!!!");
+       }else{
        textoResultado.setText(String.valueOf(micalculadora.Secante()));
+       }
     }//GEN-LAST:event_botonSecanteMouseClicked
 
     private void botonCosecanteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCosecanteMouseClicked
-       micalculadora.angulo=Float.valueOf(textoAngulo.getText());
+       micalculadora.anguloingresado=Float.valueOf(textoAngulo.getText());
+       if(micalculadora.angulo==0||micalculadora.angulo==Math.PI||micalculadora.angulo==Math.PI*2){
+           textoResultado.setText("");
+           JOptionPane.showMessageDialog(null, "No definido!!!");
+       }else{
        textoResultado.setText(String.valueOf(micalculadora.Cosecante()));
+       }
     }//GEN-LAST:event_botonCosecanteMouseClicked
 
     /**

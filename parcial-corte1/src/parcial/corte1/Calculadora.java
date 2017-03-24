@@ -14,6 +14,7 @@ public class Calculadora {
     float numero1;
     float numero2;
     double angulo;
+    double anguloingresado;
     
     float sumar(){
         return(numero1+numero2);
@@ -38,17 +39,17 @@ public class Calculadora {
     }    
     
     double Seno(){
-        double angulo = 45.0 * Math.PI/180.0;
+        double angulo = anguloingresado * Math.PI/180.0;
         return(Math.sin(angulo));
     }  
     
     double Coseno(){
-        double angulo = 45.0 * Math.PI/180.0;
+        double angulo = anguloingresado * Math.PI/180.0;
         return(Math.cos(angulo));
     }    
     
     double Tangente(){
-        double angulo = 45.0 * Math.PI/180.0;
+        double angulo = anguloingresado * Math.PI/180.0;
         if(angulo==Math.PI/2||angulo==Math.PI*3/2){
             return(0);
         }else{
@@ -57,7 +58,7 @@ public class Calculadora {
     }    
     
     double Cotangente(){
-        double angulo = 45.0 * Math.PI/180.0;
+        double angulo = anguloingresado * Math.PI/180.0;
         if(angulo==0||angulo==Math.PI||angulo==Math.PI*2){
             return(0);
         }else{
@@ -66,7 +67,7 @@ public class Calculadora {
     }    
     
     double Secante(){
-        double angulo = 45.0 * Math.PI/180.0;
+        double angulo = anguloingresado * Math.PI/180.0;
         if(angulo==Math.PI/2||angulo==Math.PI*3/2){
             return(0);
         }else{
@@ -75,7 +76,7 @@ public class Calculadora {
     } 
     
     double Cosecante(){
-        double angulo = 45.0 * Math.PI/180.0;
+        double angulo = anguloingresado * Math.PI/180.0;
         if(angulo==0||angulo==Math.PI||angulo==Math.PI*2){
             return(0);
         }else{
