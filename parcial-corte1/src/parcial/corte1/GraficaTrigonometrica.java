@@ -283,7 +283,7 @@ public class GraficaTrigonometrica extends javax.swing.JFrame {
 
     private void botonTangeteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonTangeteMouseClicked
        micalculadora.anguloingresado=Float.valueOf(textoAngulo.getText());
-       if(micalculadora.angulo==Math.PI/2||micalculadora.angulo==Math.PI*3/2){
+       if(micalculadora.anguloingresado==90||micalculadora.anguloingresado==270){
            textoResultado.setText("");
            JOptionPane.showMessageDialog(null, "No definido!!!");
        }else{
@@ -293,7 +293,7 @@ public class GraficaTrigonometrica extends javax.swing.JFrame {
 
     private void botonCotangenteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCotangenteMouseClicked
        micalculadora.anguloingresado=Float.valueOf(textoAngulo.getText());
-       if(micalculadora.angulo==0||micalculadora.angulo==Math.PI||micalculadora.angulo==Math.PI*2){
+       if(micalculadora.anguloingresado==0||micalculadora.anguloingresado==180||micalculadora.anguloingresado==360){
            textoResultado.setText("");
            JOptionPane.showMessageDialog(null, "No definido!!!");
        }else{
@@ -303,7 +303,7 @@ public class GraficaTrigonometrica extends javax.swing.JFrame {
 
     private void botonSecanteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSecanteMouseClicked
        micalculadora.anguloingresado=Float.valueOf(textoAngulo.getText());
-       if(micalculadora.angulo==Math.PI/2||micalculadora.angulo==Math.PI*3/2){
+       if(micalculadora.anguloingresado==90||micalculadora.anguloingresado==270){
            textoResultado.setText("");
            JOptionPane.showMessageDialog(null, "No definido!!!");
        }else{
@@ -313,7 +313,7 @@ public class GraficaTrigonometrica extends javax.swing.JFrame {
 
     private void botonCosecanteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCosecanteMouseClicked
        micalculadora.anguloingresado=Float.valueOf(textoAngulo.getText());
-       if(micalculadora.angulo==0||micalculadora.angulo==Math.PI||micalculadora.angulo==Math.PI*2){
+       if(micalculadora.anguloingresado==0||micalculadora.anguloingresado==180||micalculadora.anguloingresado==360){
            textoResultado.setText("");
            JOptionPane.showMessageDialog(null, "No definido!!!");
        }else{
